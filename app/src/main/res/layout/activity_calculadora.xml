@@ -49,11 +49,12 @@
             android:onClick="sumar"/>
 
         <Button
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="Restar"
-            android:onClick="restar"/>
+            android:onClick="restar"
+            android:text="Restar" />
     </LinearLayout>
 
 </LinearLayout>

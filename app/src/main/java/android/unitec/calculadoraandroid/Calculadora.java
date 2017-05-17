@@ -14,7 +14,7 @@ public class Calculadora extends AppCompatActivity {
         setContentView(R.layout.activity_calculadora);
         n1 = (EditText)findViewById(R.id.n1);
         n2 = (EditText)findViewById(R.id.n2);
-    }22
+    }
     public void sumar(View v){
         int num1 = Integer.parseInt(n1.getText().toString());
         int num2 = Integer.parseInt(n2.getText().toString());
