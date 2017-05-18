@@ -16,28 +16,53 @@ public class Calculadora extends AppCompatActivity {
         n2 = (EditText)findViewById(R.id.n2);
     }
     public void sumar(View v){
-        int num1 = Integer.parseInt(n1.getText().toString());
-        int num2 = Integer.parseInt(n2.getText().toString());
-        int sum = num1 + num2;
-        mostrar(sum);
+        try {
+            int num1 = Integer.parseInt(n1.getText().toString());
+            int num2 = Integer.parseInt(n2.getText().toString());
+            int sum = num1 + num2;
+            mostrar(sum);
+        }
+        catch (Exception e){
+            mostrarError();
+        }
     }
     public void restar(View v){
-        int num1 = Integer.parseInt(n1.getText().toString());
-        int num2 = Integer.parseInt(n2.getText().toString());
-        int restar = num1 - num2;
-        mostrar(restar);
+        try {
+            int num1 = Integer.parseInt(n1.getText().toString());
+            int num2 = Integer.parseInt(n2.getText().toString());
+            int restar = num1 - num2;
+            mostrar(restar);
+        }
+        catch (Exception e){
+            mostrarError();
+        }
     }
     public void dividir(View v){
-        int num1 = Integer.parseInt(n1.getText().toString());
-        int num2 = Integer.parseInt(n2.getText().toString());
-        int div = num1 / num2;
-        mostrar(div);
+        try {
+            int num1 = Integer.parseInt(n1.getText().toString());
+            int num2 = Integer.parseInt(n2.getText().toString());
+            int div = num1 / num2;
+            mostrar(div);
+        }
+        catch (Exception e){
+            mostrarError();
+        }
     }
     public void multiplicar(View v){
-        int num1 = Integer.parseInt(n1.getText().toString());
-        int num2 = Integer.parseInt(n2.getText().toString());
-        int mult = num1 * num2;
-        mostrar(mult);
+        try {
+            int num1 = Integer.parseInt(n1.getText().toString());
+            int num2 = Integer.parseInt(n2.getText().toString());
+            int mult = num1 * num2;
+            mostrar(mult);
+        }
+        catch (Exception e){
+            mostrarError();
+        }
+    }
+    private void mostrarError(){
+        n1.setText(" ");
+        n2.setText(" ");
+        Toast.makeText(this,"Porfavor ingrese los valores, o ingrese valores corrrectos",Toast.LENGTH_LONG).show();
     }
     private void mostrar(int res){
         Toast.makeText(this,"Resultado es: " + res,Toast.LENGTH_LONG).show();
