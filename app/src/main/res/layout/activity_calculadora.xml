@@ -3,8 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="@drawable/fondo_noche_ciudad_1280x800"
     android:columnCount="4"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -15,14 +17,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Numero1:"
+            android:textColor="@android:color/holo_orange_dark"
             android:textSize="18sp" />
 
         <EditText
+            android:id="@+id/n1"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:id="@+id/n1"/>
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -31,30 +36,62 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Numero2:"
+            android:textColor="@android:color/holo_orange_dark"
             android:textSize="18sp" />
+
         <EditText
+            android:id="@+id/n2"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:id="@+id/n2"/>
+            android:textColor="@android:color/background_dark" />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="187dp"
-        android:layout_height="59dp">
+
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_weight="0.03"
+        android:layout_x="4dp"
+        android:layout_y="0dp">
 
         <Button
+            android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_x="286dp"
+            android:layout_y="10dp"
             android:background="@color/colorPrimary"
-            android:text="Sumar"
-            android:onClick="sumar"/>
+            android:onClick="dividir"
+            android:text="Dividir" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_x="194dp"
+            android:layout_y="10dp"
+            android:background="@color/colorPrimary"
+            android:onClick="multiplicar"
+            android:text="Multiplicar" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="102dp"
+            android:layout_y="10dp"
             android:background="@color/colorPrimary"
             android:onClick="restar"
             android:text="Restar" />
-    </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="10dp"
+            android:layout_y="10dp"
+            android:background="@color/colorPrimary"
+            android:onClick="sumar"
+            android:text="Sumar" />
+    </AbsoluteLayout>
 
 </LinearLayout>

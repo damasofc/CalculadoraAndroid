@@ -27,6 +27,18 @@ public class Calculadora extends AppCompatActivity {
         int restar = num1 - num2;
         mostrar(restar);
     }
+    public void dividir(View v){
+        int num1 = Integer.parseInt(n1.getText().toString());
+        int num2 = Integer.parseInt(n2.getText().toString());
+        int div = num1 / num2;
+        mostrar(div);
+    }
+    public void multiplicar(View v){
+        int num1 = Integer.parseInt(n1.getText().toString());
+        int num2 = Integer.parseInt(n2.getText().toString());
+        int mult = num1 * num2;
+        mostrar(mult);
+    }
     private void mostrar(int res){
         Toast.makeText(this,"Resultado es: " + res,Toast.LENGTH_LONG).show();
     }
